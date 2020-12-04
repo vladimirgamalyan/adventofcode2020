@@ -13,6 +13,9 @@ int main()
     assert(day2b() == 688);
     assert(day3a() == 218);
     assert(day3b() == 3847183340);
+    assert(day4a() == 196);
+    assert(day4b() == 114);
 
     std::cout << day4a() << "\n";
+    std::cout << day4b() << "\n";
 }
