@@ -1,5 +1,5 @@
 #pragma once
 #include "utils.h"
 
-int day1a();
-int day1b();
+int day4a();
+int day4b();

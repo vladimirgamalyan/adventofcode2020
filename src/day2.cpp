@@ -1,10 +1,4 @@
 #include "day2.h"
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <cassert>
-#include <sstream>
-#include "utils.h"
 
 struct Item
 {
@@ -14,7 +8,7 @@ struct Item
 	std::string pass;
 };
 
-Item fromString(const std::string& s)
+static Item fromString(const std::string& s)
 {
 	Item result;
 	std::stringstream ss;
@@ -24,14 +18,14 @@ Item fromString(const std::string& s)
 	return result;
 }
 
-bool isValidA(const std::string& s)
+static bool isValidA(const std::string& s)
 {
 	Item item = fromString(s);
 	int count = std::count(item.pass.begin(), item.pass.end(), item.letter);
 	return count >= item.a && count <= item.b;
 }
 
-bool isValidB(const std::string& s)
+static bool isValidB(const std::string& s)
 {
 	Item item = fromString(s);
 	int c = 0;

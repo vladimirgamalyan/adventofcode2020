@@ -1,8 +1,4 @@
 #include "day1.h"
-#include <string>
-#include <vector>
-#include <iostream>
-#include "utils.h"
 
 int day1a()
 {

@@ -1,5 +1,5 @@
 #pragma once
 #include "utils.h"
 
-int day1a();
-int day1b();
+int64_t day3a();
+int64_t day3b();

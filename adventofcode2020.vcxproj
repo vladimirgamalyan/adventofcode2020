@@ -143,7 +143,9 @@
   <ItemGroup>
     <ClCompile Include="src\day1.cpp" />
     <ClCompile Include="src\day2.cpp" />
+    <ClCompile Include="src\day4.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\day3.cpp" />
     <ClCompile Include="src\utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,11 +155,15 @@
   <ItemGroup>
     <ClInclude Include="src\day1.h" />
     <ClInclude Include="src\day2.h" />
+    <ClInclude Include="src\day3.h" />
+    <ClInclude Include="src\day4.h" />
     <ClInclude Include="src\utils.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\1.txt" />
     <Text Include="input\2.txt" />
+    <Text Include="input\3.txt" />
+    <Text Include="input\4.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
