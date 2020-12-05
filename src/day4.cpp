@@ -1,5 +1,4 @@
 #include "day4.h"
-#include <regex>
 
 static const std::string digits = "0123456789";
 static const std::string hexs = "0123456789abcdef";
