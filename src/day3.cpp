@@ -1,4 +1,4 @@
-#include "day3.h"
+#include "utils.h"
 
 static std::vector<bool> parse_trees(const std::string& s)
 {

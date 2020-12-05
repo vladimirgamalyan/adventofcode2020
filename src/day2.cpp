@@ -1,4 +1,4 @@
-#include "day2.h"
+#include "utils.h"
 
 struct Item
 {

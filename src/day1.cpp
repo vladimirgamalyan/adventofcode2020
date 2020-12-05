@@ -1,4 +1,4 @@
-#include "day1.h"
+#include "utils.h"
 
 int day1a()
 {

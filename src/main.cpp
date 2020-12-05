@@ -1,11 +1,17 @@
-#include <iostream>
-#include <cassert>
-#include "day1.h"
-#include "day2.h"
-#include "day3.h"
-#include "day4.h"
-#include "day5.h"
-#include "day6.h"
+#include "utils.h"
+
+int day1a();
+int day1b();
+int day2a();
+int day2b();
+int64_t day3a();
+int64_t day3b();
+int day4a();
+int day4b();
+int day5a();
+int day5b();
+int day6a();
+int day6b();
 
 int main()
 {
