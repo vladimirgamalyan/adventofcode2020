@@ -12,6 +12,8 @@ int day5a();
 int day5b();
 int day6a();
 int day6b();
+int day7a();
+int day7b();
 
 int main()
 {
@@ -25,6 +27,9 @@ int main()
     assert(day4b() == 114);
     assert(day5a() == 998);
     assert(day5b() == 676);
+    assert(day6a() == 6457);
+    assert(day6b() == 3260);
 
-    std::cout << day6a() << "\n";
+    std::cout << day7a() << "\n";
+    std::cout << day7b() << "\n";
 }

@@ -3,12 +3,7 @@
 static int parseSeatId(std::string s)
 {
 	for (char& c : s)
-	{
-		if (c == 'F' || c == 'L')
-			c = '0';
-		if (c == 'B' || c == 'R')
-			c = '1';
-	}
+		c = c == 'B' || c == 'R' ? '1' : '0';
 	
 	return std::stoi(s, nullptr, 2);
 }
@@ -33,9 +28,8 @@ int day5b()
 	std::sort(l.begin(), l.end());
 
 	for (size_t i = 0; i < l.size() - 1; ++i)
-	{
 		if (l[i] + 2 == l[i + 1])
 			return l[i] + 1;
-	}
+
 	return -1;
 }

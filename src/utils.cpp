@@ -9,6 +9,18 @@ std::vector<std::string> readStringList(const std::string& path)
 	return result;
 }
 
+std::vector<std::vector<std::string>> readStringLists(const std::string& path)
+{
+	std::vector<std::vector<std::string>> result(1);
+	std::ifstream ifs(path);
+	for (std::string line; std::getline(ifs, line);)
+		if (line.empty())
+			result.resize(result.size() + 1);
+		else
+			result.back().push_back(line);
+	return result;
+}
+
 std::vector<int> readIntList(const std::string& path)
 {
 	auto l = readStringList(path);

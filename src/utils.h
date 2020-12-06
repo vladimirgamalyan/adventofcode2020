@@ -11,6 +11,7 @@
 #include <set>
 
 std::vector<std::string> readStringList(const std::string& path);
+std::vector<std::vector<std::string>> readStringLists(const std::string& path);
 std::vector<int> readIntList(const std::string& path);
 std::vector<std::string> splitStr(const std::string& s, const std::string& delimiters);
 bool containsOnly(const std::string& s, const std::string& chars);

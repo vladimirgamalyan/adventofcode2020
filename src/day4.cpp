@@ -88,25 +88,22 @@ static bool checkField(const std::string& key, const std::string& value)
 
 static int getValidPassports(bool strict)
 {
-	auto l = readStringList("input/4.txt");
-	if (!l.back().empty())
-		l.push_back("");
+	auto l = readStringLists("input/4.txt");
 	std::vector<std::map<std::string, std::string>> recs;
 	std::map<std::string, std::string> m;
-	for (const auto& s : l)
+	for (const auto& g : l)
 	{
-		if (s.empty())
+		for (const auto& s : g)
 		{
-			recs.push_back(m);
-			m.clear();
-			continue;
+			auto v = splitStr(s, " \n");
+			for (const auto& t : v)
+			{
+				auto k = splitStr(t, ":");
+				m[k[0]] = k[1];
+			}
 		}
-		auto v = splitStr(s, " \n");
-		for (const auto& t : v)
-		{
-			auto k = splitStr(t, ":");
-			m[k[0]] = k[1];
-		}
+		recs.push_back(m);
+		m.clear();
 	}
 
 	int validRecords = 0;
