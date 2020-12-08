@@ -16,6 +16,14 @@ int day7a();
 int day7b();
 int day8a();
 int day8b();
+int day9a();
+int day9b();
+int day10a();
+int day10b();
+int day11a();
+int day11b();
+int day12a();
+int day12b();
 
 int main()
 {
@@ -33,6 +41,8 @@ int main()
     //assert(day6b() == 3260);
     //assert(day7a() == 121);
     //assert(day7b() == 3805);
+    //assert(day8a() == 1814);
+    //assert(day8b() == 1056);
 
-    std::cout << day8a() << "\n";
+    std::cout << day9a() << "\n";
 }

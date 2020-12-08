@@ -146,12 +146,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\day1.cpp" />
+    <ClCompile Include="src\day10.cpp" />
+    <ClCompile Include="src\day11.cpp" />
+    <ClCompile Include="src\day12.cpp" />
     <ClCompile Include="src\day2.cpp" />
     <ClCompile Include="src\day4.cpp" />
     <ClCompile Include="src\day5.cpp" />
     <ClCompile Include="src\day6.cpp" />
     <ClCompile Include="src\day7.cpp" />
     <ClCompile Include="src\day8.cpp" />
+    <ClCompile Include="src\day9.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\day3.cpp" />
     <ClCompile Include="src\utils.cpp">
@@ -169,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="input\1.txt" />
+    <Text Include="input\10.txt" />
+    <Text Include="input\11.txt" />
+    <Text Include="input\12.txt" />
     <Text Include="input\2.txt" />
     <Text Include="input\3.txt" />
     <Text Include="input\4.txt" />
@@ -176,6 +183,7 @@
     <Text Include="input\6.txt" />
     <Text Include="input\7.txt" />
     <Text Include="input\8.txt" />
+    <Text Include="input\9.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

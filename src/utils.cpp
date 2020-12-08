@@ -63,3 +63,16 @@ bool endsWith(std::string const& value, std::string const& ending)
 	if (ending.size() > value.size()) return false;
 	return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
 }
+
+int strToInt(const std::string& s)
+{
+	if (s.empty())
+		throw std::exception();
+	if (s.size() > 10)
+		throw std::exception();
+	if (!containsOnly(s, "-0123456789"))
+		throw std::exception();
+	if (s.size() > 1 && s[0] == '0')
+		throw std::exception();
+	return std::stoi(s);
+}
