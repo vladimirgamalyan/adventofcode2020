@@ -3,10 +3,10 @@
 static bool testNumber(const std::vector<long long>& l, size_t index, size_t preamble)
 {
 	long long v = l[index];
-	int start = index - preamble;
+	const auto* r = &l[index - preamble];
 	for (size_t i = 0; i < preamble - 1; ++i)
 		for (size_t k = i + 1; k < preamble; ++k)
-			if (l[start + i] + l[start + k] == v)
+			if (r[i] + r[k] == v)
 				return true;
 	return false;
 }
