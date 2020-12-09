@@ -34,7 +34,7 @@ long long day9b()
 	for (size_t i = 0; i < l.size() - 1; ++i)
 	{
 		long long s = l[i];
-		for (size_t k = i + 1; s < x; ++k)
+		for (size_t k = i + 1; k < l.size(); ++k)
 		{
 			s += l[k];
 			if (s == x)
@@ -42,6 +42,8 @@ long long day9b()
 				auto result = std::minmax_element(&l[i], &l[k + 1]);
 				return *result.first + *result.second;
 			}
+			if (s > x)
+				break;
 		}
 	}
 
