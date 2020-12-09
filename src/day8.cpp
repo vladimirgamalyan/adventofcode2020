@@ -15,7 +15,7 @@ struct ProgLine
 
 typedef std::vector<ProgLine> Prog;
 
-Prog readProg()
+static Prog readProg()
 {
 	Prog result;
 	auto l = readStringList("input/8.txt");
@@ -38,7 +38,7 @@ Prog readProg()
 	return result;
 }
 
-bool runProg(const Prog& prog, int& acc, int patch)
+static bool runProg(const Prog& prog, int& acc, int patch)
 {
 	int pc = 0;
 	std::set<int> used;

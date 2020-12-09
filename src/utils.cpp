@@ -29,6 +29,14 @@ std::vector<int> readIntList(const std::string& path)
 	return result;
 }
 
+std::vector<long long> readLongIntList(const std::string& path)
+{
+	auto l = readStringList(path);
+	std::vector<long long> result(l.size());
+	std::transform(l.begin(), l.end(), result.begin(), [](const std::string& s) {return std::stoll(s); });
+	return result;
+}
+
 std::vector<std::string> splitStr(const std::string& s, const std::string& delimiters)
 {
 	std::vector<std::string> result;

@@ -16,8 +16,8 @@ int day7a();
 int day7b();
 int day8a();
 int day8b();
-int day9a();
-int day9b();
+long long day9a();
+long long day9b();
 int day10a();
 int day10b();
 int day11a();
@@ -43,6 +43,9 @@ int main()
     //assert(day7b() == 3805);
     //assert(day8a() == 1814);
     //assert(day8b() == 1056);
+    assert(day9a() == 21806024);
+    assert(day9b() == 2986195);
 
     std::cout << day9a() << "\n";
+    std::cout << day9b() << "\n";
 }
