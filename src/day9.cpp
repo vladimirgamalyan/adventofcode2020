@@ -22,8 +22,7 @@ static long long getInvalidNumber(const std::vector<long long>& l)
 
 long long day9a()
 {
-	const auto l = readLongIntList("input/9.txt");
-	return getInvalidNumber(l);
+	return getInvalidNumber(readLongIntList("input/9.txt"));
 }
 
 long long day9b()
