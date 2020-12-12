@@ -81,12 +81,9 @@ static int stepMaze(std::vector<std::vector<int>>& maze, int maxChair, bool adja
 		for (size_t x = 0; x < maze[y].size(); ++x)
 		{
 			int& k = maze[y][x];
-			if (k)
-			{
-				if (k == 3 || k == 5)
-					++changes;
-				k = k >> 1 | k & 1;
-			}
+			if (k == 3 || k == 5)
+				++changes;
+			k = k >> 1 | k & 1;
 		}
 	}
 
@@ -101,7 +98,7 @@ static void printMaze(const std::vector<std::vector<int>>& maze)
 		{
 			int k = maze[y][x];
 			char c = '?';
-			if (!k)
+			if (k == 0)
 				c = '.';
 			else if (k == 1)
 				c = 'L';
@@ -121,10 +118,10 @@ static std::vector<std::vector<int>> loadMaze()
 	for (size_t i = 0; i < l.size(); ++i)
 	{
 		const auto& line = l[i];
-		maze[i].resize(line.size(), 0);
-		for (size_t k = 0; k < line.size(); ++k)
-			if (line[k] == 'L')
-				maze[i][k] = 1;
+		if (i)
+			assert(maze.front().size() == line.size());
+		maze[i].resize(line.size());
+		std::transform(line.begin(), line.end(), maze[i].begin(), [](char c) { return c == 'L'; });
 	}
 	return maze;
 }
@@ -134,12 +131,9 @@ static int getResult(int maxChair, bool adjacentOnly)
 	auto maze = loadMaze();
 
 	//printMaze(maze);
-	for (;;)
+	while (stepMaze(maze, maxChair, adjacentOnly))
 	{
-		int changes = stepMaze(maze, maxChair, adjacentOnly);
 		//printMaze(maze);
-		if (!changes)
-			break;
 	}
 
 	return getOccupedSeats(maze);
