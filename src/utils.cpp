@@ -1,11 +1,16 @@
 #include "utils.h"
 
-std::vector<std::string> readStringList(const std::string& path)
+void readStringList(const std::string& path, std::vector<std::string>& result)
 {
 	std::ifstream ifs(path);
-	std::vector<std::string> result;
 	for (std::string line; std::getline(ifs, line);)
 		result.push_back(line);
+}
+
+std::vector<std::string> readStringList(const std::string& path)
+{
+	std::vector<std::string> result;
+	readStringList(path, result);
 	return result;
 }
 

@@ -10,6 +10,7 @@
 #include <map>
 #include <set>
 
+void readStringList(const std::string& path, std::vector<std::string>& result);
 std::vector<std::string> readStringList(const std::string& path);
 std::vector<std::vector<std::string>> readStringLists(const std::string& path);
 std::vector<int> readIntList(const std::string& path);
