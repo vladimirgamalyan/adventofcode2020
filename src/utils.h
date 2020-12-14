@@ -18,4 +18,4 @@ std::vector<long long> readLongIntList(const std::string& path);
 std::vector<std::string> splitStr(const std::string& s, const std::string& delimiters);
 bool containsOnly(const std::string& s, const std::string& chars);
 bool endsWith(std::string const& value, std::string const& ending);
-int strToInt(const std::string& s);
+int strToInt(std::string s);

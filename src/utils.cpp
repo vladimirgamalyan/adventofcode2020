@@ -77,15 +77,20 @@ bool endsWith(std::string const& value, std::string const& ending)
 	return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
 }
 
-int strToInt(const std::string& s)
+int strToInt(std::string s)
 {
 	if (s.empty())
 		throw std::exception();
+	bool minus = s[0] == '-';
+	if (minus)
+		s = s.substr(1);
 	if (s.size() > 10)
 		throw std::exception();
-	if (!containsOnly(s, "-0123456789"))
+	if (!containsOnly(s, "0123456789"))
 		throw std::exception();
-	if (s.size() > 1 && s[0] == '0')
+	if (s[0] == '0' && (minus || s.size()))
 		throw std::exception();
+	if (minus)
+		return -std::stoi(s);
 	return std::stoi(s);
 }

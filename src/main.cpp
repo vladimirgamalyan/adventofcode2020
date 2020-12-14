@@ -24,6 +24,12 @@ int day11a();
 int day11b();
 int day12a();
 int day12b();
+int day13a();
+uint64_t day13b();
+int day14a();
+int day14b();
+int day15a();
+int day15b();
 
 int main()
 {
@@ -49,7 +55,11 @@ int main()
     //assert(day10b() == 453551299002368);
     //assert(day11a() == 2354);
     //assert(day11b() == 2072);
+    //assert(day12a() == 1177);
+    //assert(day12b() == 46530);
+    //assert(day13a() == 115);
+    //assert(day13b() == 756261495958122);
 
-    std::cout << day12a() << "\n";
-    std::cout << day12b() << "\n";
+    std::cout << day13a() << "\n";
+    std::cout << day13b() << "\n";
 }

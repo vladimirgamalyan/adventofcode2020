@@ -3,7 +3,7 @@
 // direction:
 //	0 - N
 //	1 - W
-//  2 - S
+//	2 - S
 //	3 - E
 
 int day12a()
@@ -22,10 +22,7 @@ int day12a()
 		{
 			while (v)
 			{
-				if (d == 3)
-					d = 0;
-				else
-					++d;
+				d = (d + 1) % 4;
 				v -= 90;
 				assert(v >= 0);
 			}
@@ -34,10 +31,7 @@ int day12a()
 		{
 			while (v)
 			{
-				if (d == 0)
-					d = 3;
-				else
-					--d;
+				d = d ? d - 1 : 3;
 				v -= 90;
 				assert(v >= 0);
 			}
