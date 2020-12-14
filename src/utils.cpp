@@ -77,20 +77,27 @@ bool endsWith(std::string const& value, std::string const& ending)
 	return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
 }
 
-int strToInt(std::string s)
+long strToInt(const std::string& s, int base)
 {
-	if (s.empty())
-		throw std::exception();
-	bool minus = s[0] == '-';
-	if (minus)
-		s = s.substr(1);
-	if (s.size() > 10)
-		throw std::exception();
-	if (!containsOnly(s, "0123456789"))
-		throw std::exception();
-	if (s[0] == '0' && (minus || s.size()))
-		throw std::exception();
-	if (minus)
-		return -std::stoi(s);
-	return std::stoi(s);
+	char* end;
+	errno = 0;
+	long result = std::strtol(s.c_str(), &end, base);
+	if (errno == ERANGE || result > INT_MAX || result < INT_MIN)
+		throw std::out_of_range("strToInt: string is out of range");
+	if (s.length() == 0 || *end != '\0')
+		throw std::invalid_argument("strToInt: invalid string");
+	return result;
 }
+
+long long strToLongLong(const std::string& s, int base)
+{
+	char* end;
+	errno = 0;
+	long long result = std::strtoll(s.c_str(), &end, base);
+	if (errno == ERANGE || result > LLONG_MAX || result < LLONG_MIN)
+		throw std::out_of_range("strToLongLong: string is out of range");
+	if (s.length() == 0 || *end != '\0')
+		throw std::invalid_argument("strToLongLong: invalid string");
+	return result;
+}
+
