@@ -59,9 +59,11 @@ int main()
     //assert(day12b() == 46530);
     //assert(day13a() == 115);
     //assert(day13b() == 756261495958122);
-    assert(day14a() == 11612740949946);
-    assert(day14b() == 3394509207186);
+    //assert(day14a() == 11612740949946);
+    //assert(day14b() == 3394509207186);
+    assert(day15a() == 870);
+    assert(day15b() == 9136);
 
-    std::cout << day14a() << "\n";
-    std::cout << day14b() << "\n";
+    std::cout << day15a() << "\n";
+    std::cout << day15b() << "\n";
 }
