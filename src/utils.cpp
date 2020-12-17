@@ -61,6 +61,15 @@ std::vector<std::string> splitStr(const std::string& s, const std::string& delim
 	return result;
 }
 
+std::vector<int> splitStrToInt(const std::string& s, const std::string& delimiters)
+{
+	const auto l = splitStr(s, delimiters);
+	std::vector<int> result;
+	for (const auto& s : l)
+		result.push_back(strToInt(s));
+	return result;
+}
+
 bool containsOnly(const std::string& s, const std::string& chars)
 {
 	for (char c : s)
@@ -71,10 +80,15 @@ bool containsOnly(const std::string& s, const std::string& chars)
 	return true;
 }
 
-bool endsWith(std::string const& value, std::string const& ending)
+bool endsWith(const std::string& s, const std::string& ending)
 {
-	if (ending.size() > value.size()) return false;
-	return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
+	if (ending.size() > s.size()) return false;
+	return std::equal(ending.rbegin(), ending.rend(), s.rbegin());
+}
+
+bool startsWith(const std::string& s, const std::string& beginning)
+{
+	return s.rfind(beginning, 0) == 0;
 }
 
 long strToInt(const std::string& s, int base)
@@ -101,3 +115,15 @@ long long strToLongLong(const std::string& s, int base)
 	return result;
 }
 
+std::string trimString(const std::string& s)
+{
+	std::string::const_iterator it = s.begin();
+	while (it != s.end() && isspace(*it))
+		it++;
+
+	std::string::const_reverse_iterator rit = s.rbegin();
+	while (rit.base() != it && isspace(*rit))
+		rit++;
+
+	return std::string(it, rit.base());
+}
