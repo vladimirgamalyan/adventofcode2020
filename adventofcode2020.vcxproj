@@ -153,7 +153,8 @@
     <ClCompile Include="src\day14.cpp" />
     <ClCompile Include="src\day15.cpp" />
     <ClCompile Include="src\day16.cpp" />
-    <ClCompile Include="src\day17.cpp" />
+    <ClCompile Include="src\day17a.cpp" />
+    <ClCompile Include="src\day17b.cpp" />
     <ClCompile Include="src\day18.cpp" />
     <ClCompile Include="src\day19.cpp" />
     <ClCompile Include="src\day2.cpp" />
