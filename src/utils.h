@@ -11,6 +11,7 @@
 #include <set>
 #include <unordered_set>
 #include <climits>
+#include <regex>
 
 void readStringList(const std::string& path, std::vector<std::string>& result);
 std::vector<std::string> readStringList(const std::string& path);
