@@ -25,6 +25,7 @@ std::string trimString(const std::string& s);
 bool containsOnly(const std::string& s, const std::string& chars);
 bool endsWith(const std::string& s, const std::string& ending);
 bool startsWith(const std::string& s, const std::string& beginning);
+size_t nthOccurrence(const std::string& str, const std::string& findMe, int nth);
 
 long strToInt(const std::string& s, int base = 0);
 long long strToLongLong(const std::string& s, int base = 0);
