@@ -1,5 +1,5 @@
 #include "utils.h"
-
+ 
 int day1a();
 int day1b();
 int day2a();
@@ -38,11 +38,18 @@ long long day18a();
 long long day18b();
 long long day19a();
 long long day19b();
-int day20a();
-int day20b();
+long long day20a();
+long long day20b();
 
-int main()
+int main(int argc, char** argv)
 {
+    doctest::Context context;
+    context.applyCommandLine(argc, argv);
+    int res = context.run();
+    if (context.shouldExit())
+        return res;
+    std::cout << "\n";
+
     //assert(day1a() == 646779);
     //assert(day1b() == 246191688);
     //assert(day2a() == 416);
@@ -81,7 +88,9 @@ int main()
     //assert(day18b() == 88500956630893);
     //assert(day19a() == 203);
     //assert(day19b() == 304);
+    assert(day20a() == 16192267830719);
+    assert(day20b() == 1909);
 
-    std::cout << day19a() << "\n";
-    std::cout << day19b() << "\n";
+    //std::cout << day20a() << "\n";
+    //std::cout << day20b() << "\n";
 }

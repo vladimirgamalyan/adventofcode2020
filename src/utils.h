@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <array>
 #include <string>
 #include <iostream>
 #include <algorithm>
@@ -12,6 +13,7 @@
 #include <unordered_set>
 #include <climits>
 #include <regex>
+#include "doctest.h"
 
 void readStringList(const std::string& path, std::vector<std::string>& result);
 std::vector<std::string> readStringList(const std::string& path);
