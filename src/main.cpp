@@ -40,6 +40,7 @@ long long day19a();
 long long day19b();
 long long day20a();
 long long day20b();
+std::pair<int, std::string> day21();
 
 int main(int argc, char** argv)
 {
@@ -88,9 +89,11 @@ int main(int argc, char** argv)
     //assert(day18b() == 88500956630893);
     //assert(day19a() == 203);
     //assert(day19b() == 304);
-    assert(day20a() == 16192267830719);
-    assert(day20b() == 1909);
+    //assert(day20a() == 16192267830719);
+    //assert(day20b() == 1909);
+    assert(day21().first == 2170);
+    assert(day21().second == "nfnfk,nbgklf,clvr,fttbhdr,qjxxpr,hdsm,sjhds,xchzh");
 
-    //std::cout << day20a() << "\n";
-    //std::cout << day20b() << "\n";
+    //std::cout << day21().first << "\n";
+    //std::cout << day21().second << "\n";
 }
